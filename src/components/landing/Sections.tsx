@@ -187,6 +187,7 @@ export function Footer() {
             <a key={l} href="#" title="Página em breve" className="hover:text-gold focus-visible:text-gold">{l}</a>
           ))}
         </nav>
+        <p className="mt-6 text-xs">© {new Date().getFullYear()} Protetor UV Premium. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
