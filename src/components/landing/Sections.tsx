@@ -187,8 +187,7 @@ export function Footer() {
             <a key={l} href="#" title="Página em breve" className="hover:text-gold focus-visible:text-gold">{l}</a>
           ))}
         </nav>
-        <p className="mt-6 text-xs">[Razão social] · CNPJ [00.000.000/0000-00] · [endereço comercial] — dados a preencher</p>
-        <p className="mt-2 text-xs">© {new Date().getFullYear()} Protetor UV Premium. Todos os direitos reservados.</p>
+        <p className="mt-6 text-xs">© {new Date().getFullYear()} Protetor UV Premium. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
