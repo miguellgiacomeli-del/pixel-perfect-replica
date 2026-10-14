@@ -1,24 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AnnouncementBar, HeroSection, BenefitsSection, ComparisonSection, GuaranteeSection, FinalCTASection, Footer, MobileStickyCTA } from "@/components/landing/Sections";
+import { PricingSection } from "@/components/landing/PricingSection";
+import { FAQSection } from "@/components/landing/FAQSection";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Protetor UV Premium 2 em 1 | Luminária Mata-Mosquitos";
+const description = "Mata-mosquitos UV recarregável e abajur de amamentação: proteção contra picadas e dengue sem química, sem cheiro e silencioso. Frete grátis.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      <AnnouncementBar />
+      <HeroSection />
+      <BenefitsSection />
+      <ComparisonSection />
+      <PricingSection />
+      <GuaranteeSection />
+      <FAQSection />
+      <FinalCTASection />
+      <Footer />
+      <MobileStickyCTA />
+    </main>
   );
 }
