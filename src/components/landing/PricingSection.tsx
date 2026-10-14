@@ -72,7 +72,7 @@ export function PricingSection() {
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) {
+      if (e?.isIntersecting) {
         track("ofertas_view");
         io.disconnect();
       }

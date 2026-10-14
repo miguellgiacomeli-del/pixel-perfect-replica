@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const faqs = [
+const faqs: [string, string][] = [
   ["O aparelho faz barulho ao matar o mosquito?", "Não. A atração é pela luz e o choque na grelha interna ocorre de forma ultra-silenciosa, sem estalos altos que possam atrapalhar ou assustar a criança de madrugada."],
   ["Ele é seguro caso a criança encoste?", "Sim! A grelha elétrica de 720° fica totalmente isolada por uma grade externa protetora com vãos milimétricos, impedindo o acesso de dedinhos infantis ou curiosidade de pets de estimação."],
   ["Quanto tempo dura a bateria e como recarrega?", "O aparelho possui bateria de lítio de alta autonomia que dura a noite inteira. Ele recarrega rapidamente através do cabo USB (incluso) e também pode ser utilizado ligado diretamente a uma tomada comum ou carregador de celular."],
